@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Bias Audit Report - South Africa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Responsible AI Bias Audit</h1>
+                <p>COVID-19 in South Africa</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#findings">Findings</a></li>
+                <li><a href="#disparities">Disparities</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+                <li><a href="#upload">Upload Data</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Responsible AI – Bias Audit Report</h1>
+                <h2>COVID-19 Impact Analysis in South Africa</h2>
+                <p class="hero-description">
+                    Examining disparities and biases in COVID-19 impact across demographic groups and regions 
+                    to inform more equitable public health interventions and prevent AI systems from perpetuating inequalities.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50,000</span>
+                        <span class="stat-label">Records Analyzed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24</span>
+                        <span class="stat-label">Months of Data</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">9</span>
+                        <span class="stat-label">Provinces Covered</span>
+                    </div>
+                </div>
+                <a href="#findings" class="cta-button">Explore Findings</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="overview" class="section">
+        <div class="container">
+            <h2 class="section-title">Executive Summary</h2>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="card-icon">📊</div>
+                    <h3>Dataset</h3>
+                    <p>Synthetic dataset of 50,000 records spanning January 2020 - December 2021, representing individual-level COVID-19 cases across South Africa's 9 provinces.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Objectives</h3>
+                    <p>Identify demographic disparities, assess geographic inequities, evaluate intervention effectiveness, and provide actionable recommendations for responsible AI.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">⚠️</div>
+                    <h3>Key Finding</h3>
+                    <p>Socio-economic status is the strongest predictor of mortality (2.3x higher in low SES populations), reflecting structural barriers to healthcare access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="findings" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Critical Findings</h2>
+            <div class="findings-container">
+                <div class="finding-card highlight">
+                    <div class="finding-header">
+                        <span class="finding-icon">💰</span>
+                        <h3>Socio-Economic Disparities</h3>
+                    </div>
+                    <div class="finding-content">
+                        <div class="metric-row">
+                            <span class="metric-label">Low SES Mortality Rate</span>
+                            <span class="metric-value danger">2.3x higher</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Vaccination Coverage Gap</span>
+                            <span class="metric-value warning">43% difference</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Time to Hospitalization</span>
+                            <span class="metric-value warning">42% longer</span>
+                        </div>
+                        <p class="finding-description">
+                            Low SES populations face systematic barriers including limited healthcare access, 
+                            economic constraints preventing time off work, and 28% less likelihood of receiving ICU care.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <span class="finding-icon">🗺️</span>
+                        <h3>Geographic Inequities</h3>
+                    </div>
+                    <div class="finding-content">
+                        <div class="metric-row">
+                            <span class="metric-label">Rural Case-Fatality Rate</span>
+                            <span class="metric-value danger">1.8x higher</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Testing Availability Gap</span>
+                            <span class="metric-value warning">40% lower</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Vaccination Coverage (Rural)</span>
+                            <span class="metric-value danger">34% vs 58% urban</span>
+                        </div>
+                        <p class="finding-description">
+                            Rural areas face severe healthcare infrastructure gaps, with average distance to facilities 
+                            of 45km compared to 15km in urban areas, and 6-month delays in vaccine availability.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <span class="finding-icon">💉</span>
+                        <h3>Vaccination Impact</h3>
+                    </div>
+                    <div class="finding-content">
+                        <div class="metric-row">
+                            <span class="metric-label">Fully Vaccinated Mortality</span>
+                            <span class="metric-value success">81% reduction</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Partially Vaccinated</span>
+                            <span class="metric-value success">50% reduction</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Equity Concern</span>
+                            <span class="metric-value warning">2.5x completion gap</span>
+                        </div>
+                        <p class="finding-description">
+                            While vaccination proves highly effective, rollout favored urban, high SES populations, 
+                            with low SES populations 2.5x less likely to complete vaccination series.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <span class="finding-icon">👥</span>
+                        <h3>Demographic Patterns</h3>
+                    </div>
+                    <div class="finding-content">
+                        <div class="metric-row">
+                            <span class="metric-label">Age 60+ Mortality Share</span>
+                            <span class="metric-value danger">68% of deaths</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Male Mortality Rate</span>
+                            <span class="metric-value warning">1.6x higher</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Female Vaccination Rate</span>
+                            <span class="metric-value success">12% higher</span>
+                        </div>
+                        <p class="finding-description">
+                            Age remains the strongest biological risk factor, while gender disparities reflect 
+                            both biological differences and behavioral patterns in healthcare-seeking.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="disparities" class="section">
+        <div class="container">
+            <h2 class="section-title">Understanding the Disparities</h2>
+            
+            <div class="disparity-section">
+                <h3>Provincial Variations</h3>
+                <div class="province-grid">
+                    <div class="province-card high-impact">
+                        <h4>Most Affected</h4>
+                        <ul>
+                            <li><strong>Gauteng:</strong> 32% of cases, 65% vaccination</li>
+                            <li><strong>Western Cape:</strong> High per capita rate, 62% vaccination</li>
+                            <li><strong>KwaZulu-Natal:</strong> High population, 48% vaccination</li>
+                        </ul>
+                    </div>
+                    <div class="province-card underserved">
+                        <h4>Underserved</h4>
+                        <ul>
+                            <li><strong>Eastern Cape:</strong> 1.8x mortality, 38% vaccination</li>
+                            <li><strong>Limpopo:</strong> Limited infrastructure, 35% vaccination</li>
+                            <li><strong>Northern Cape:</strong> Resource constraints, 40% vaccination</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="disparity-section">
+                <h3>Intersectional Vulnerabilities</h3>
+                <div class="intersectional-grid">
+                    <div class="vulnerability-card critical">
+                        <h4>Most Vulnerable</h4>
+                        <p class="vulnerability-stat">5.2x higher mortality</p>
+                        <p>Low SES + Rural + Elderly populations face compounding disadvantages</p>
+                    </div>
+                    <div class="vulnerability-card severe">
+                        <h4>High Risk</h4>
+                        <p class="vulnerability-stat">4.8x higher mortality</p>
+                        <p>Low SES + Male + Comorbidities combination</p>
+                    </div>
+                    <div class="vulnerability-card moderate">
+                        <h4>Access Barriers</h4>
+                        <p class="vulnerability-stat">28% vaccination rate</p>
+                        <p>Rural + Female + Low SES populations</p>
+                    </div>
+                </div>
+                <p class="intersectional-note">
+                    <strong>Critical Insight:</strong> Biases do not operate in isolation. AI models that treat 
+                    demographic factors independently will underestimate risk for multiply marginalized groups.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommendations" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Recommendations for Responsible AI</h2>
+            
+            <div class="recommendations-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker immediate"></div>
+                    <div class="timeline-content">
+                        <h3>Immediate Actions (0-6 months)</h3>
+                        <ul>
+                            <li>Conduct comprehensive bias audits of all deployed AI systems</li>
+                            <li>Implement emergency equity measures for testing and vaccination access</li>
+                            <li>Establish rapid response mechanisms for AI-enabled discrimination</li>
+                            <li>Engage affected communities to understand priorities</li>
+                            <li>Publish transparency reports on AI performance across demographics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker medium"></div>
+                    <div class="timeline-content">
+                        <h3>Medium-Term Actions (6-18 months)</h3>
+                        <ul>
+                            <li>Redesign data collection to ensure representative sampling</li>
+                            <li>Develop fairness-aware AI models for South African context</li>
+                            <li>Invest in healthcare infrastructure in underserved regions</li>
+                            <li>Build capacity for responsible AI in public health institutions</li>
+                            <li>Establish governance frameworks with independent oversight</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker long"></div>
+                    <div class="timeline-content">
+                        <h3>Long-Term Actions (18+ months)</h3>
+                        <ul>
+                            <li>Address structural determinants of health inequity</li>
+                            <li>Create sustainable bias monitoring systems</li>
+                            <li>Develop best practices for equitable AI in public health</li>
+                            <li>Build research capacity to study health disparities</li>
+                            <li>Foster culture change toward equity-centered AI development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-principles">
+                <h3>Core Principles for Responsible AI</h3>
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <span class="principle-icon">🔍</span>
+                        <h4>Proactive Detection</h4>
+                        <p>Bias detection and mitigation throughout the AI lifecycle</p>
+                    </div>
+                    <div class="principle-card">
+                        <span class="principle-icon">🤝</span>
+                        <h4>Community Engagement</h4>
+                        <p>Meaningful involvement of affected communities in design</p>
+                    </div>
+                    <div class="principle-card">
+                        <span class="principle-icon">📈</span>
+                        <h4>Continuous Monitoring</h4>
+                        <p>Ongoing adjustment based on real-world equity impacts</p>
+                    </div>
+                    <div class="principle-card">
+                        <span class="principle-icon">💡</span>
+                        <h4>Transparency</h4>
+                        <p>Clear disclosure of capabilities, limitations, and harms</p>
+                    </div>
+                    <div class="principle-card">
+                        <span class="principle-icon">⚖️</span>
+                        <h4>Equity First</h4>
+                        <p>Health equity as primary objective, not afterthought</p>
+                    </div>
+                    <div class="principle-card">
+                        <span class="principle-icon">🎯</span>
+                        <h4>Accountability</h4>
+                        <p>Clear responsibility for addressing AI-enabled bias</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="upload" class="section section-alt"></section>
+        <div class="container">
+            <h2 class="section-title">Upload Your Data for Analysis</h2>
+            <div class="upload-section">
+                <div class="upload-container">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">📁</div>
+                        <h3>Drag & Drop Your Files Here</h3>
+                        <p>or click to browse</p>
+                        <input type="file" id="fileInput" accept=".csv,.txt,.json,.xlsx,.xls" multiple hidden>
+                        <button class="upload-button" id="uploadButton">Choose Files</button>
+                        <p class="upload-info">Supported formats: CSV, TXT, JSON, Excel (.xlsx, .xls)</p>
+                    </div>
+                    
+                    <div class="file-list" id="fileList"></div>
+                    
+                    <div class="analysis-options" id="analysisOptions" style="display: none;">
+                        <h3>Analysis Options</h3>
+                        <div class="options-grid">
+                            <label class="option-item">
+                                <input type="checkbox" name="analysis" value="demographic" checked>
+                                <span>Demographic Analysis</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox" name="analysis" value="geographic" checked>
+                                <span>Geographic Disparities</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox" name="analysis" value="socioeconomic" checked>
+                                <span>Socio-Economic Impact</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox" name="analysis" value="temporal" checked>
+                                <span>Temporal Trends</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox" name="analysis" value="intervention" checked>
+                                <span>Intervention Effectiveness</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox" name="analysis" value="bias" checked>
+                                <span>Bias Detection</span>
+                            </label>
+                        </div>
+                        <button class="analyze-button" id="analyzeButton">Run Bias Analysis</button>
+                    </div>
+                    
+                    <div class="analysis-results" id="analysisResults" style="display: none;">
+                        <h3>Analysis Results</h3>
+                        <div class="results-content" id="resultsContent"></div>
+                        <div class="results-actions">
+                            <button class="download-button" id="downloadReport">Download Report</button>
+                            <button class="reset-button" id="resetAnalysis">Upload New Data</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="upload-info-panel">
+                    <h3>📋 Data Requirements</h3>
+                    <div class="info-card">
+                        <h4>Required Columns</h4>
+                        <ul>
+                            <li>Date/Timestamp</li>
+                            <li>Age or Age Group</li>
+                            <li>Gender</li>
+                            <li>Location/Province</li>
+                            <li>Outcome (cases, hospitalizations, deaths)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Optional Columns</h4>
+                        <ul>
+                            <li>Socio-economic status</li>
+                            <li>Vaccination status</li>
+                            <li>Testing frequency</li>
+                            <li>Healthcare access metrics</li>
+                            <li>Comorbidities</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>File Format Tips</h4>
+                        <ul>
+                            <li>CSV files should be comma-separated</li>
+                            <li>First row should contain column headers</li>
+                            <li>Dates in YYYY-MM-DD format</li>
+                            <li>Missing values marked as empty or "NA"</li>
+                            <li>Maximum file size: 50MB</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card sample-data">
+                        <h4>📥 Sample Data</h4>
+                        <p>Don't have data? Download our sample dataset:</p>
+                        <button class="sample-button" id="downloadSample">Download Sample CSV</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About This Report</h2>
+            <div class="about-content"></div>
+                <div class="about-card">
+                    <h3>Dataset Nature</h3>
+                    <p>
+                        This analysis uses a <strong>synthetic dataset</strong> designed to represent plausible 
+                        COVID-19 patterns in South Africa. While not derived from actual patient data, it reflects 
+                        realistic trends based on documented pandemic patterns, including regional healthcare variations, 
+                        socio-economic disparities, and demographic distributions.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Purpose</h3>
+                    <p>
+                        This bias audit demonstrates how existing social inequities translate into differential 
+                        health outcomes and how these patterns can be encoded and amplified by AI systems. 
+                        The goal is to provide a roadmap for developing AI that contributes to more equitable 
+                        health systems rather than perpetuating disparities.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Methodology</h3>
+                    <p>
+                        Analysis includes descriptive statistics, subgroup analysis, correlation and regression 
+                        analysis, survival analysis, and fairness metrics evaluation. Data generation incorporated 
+                        demographic distributions from census data, epidemiological parameters from research, 
+                        and socio-economic gradients from health equity literature.
+                    </p>
+                </div>
+
+                <div class="disclaimer">
+                    <p>
+                        <strong>Important Note:</strong> This report is based on synthetic data and is intended 
+                        for educational and planning purposes. It should not be used as a substitute for analysis 
+                        of real-world data in actual public health decision-making.
+                    </p>
+                </div>
+
+                <div class="report-meta">
+                    <p><strong>Report Version:</strong> 1.0</p>
+                    <p><strong>Date:</strong> November 25, 2025</p>
+                    <p><strong>Prepared By:</strong> Responsible AI Audit Team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Responsible AI Bias Audit</h4>
+                    <p>Examining COVID-19 disparities to inform equitable AI development in public health.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="bias_audit_report.md">Full Report (Markdown)</a></li>
+                        <li><a href="generate_data_and_visualizations.py">Data Generation Script</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Key Topics</h4>
+                    <ul>
+                        <li>Responsible AI</li>
+                        <li>Health Equity</li>
+                        <li>Bias Detection</li>
+                        <li>Public Health</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Responsible AI Audit Team. Educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
